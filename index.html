@@ -22,16 +22,19 @@
       position: fixed;
       top: 0;
       z-index: 1000;
+      display: flex;
+      justify-content: center; /* Centers the navbar content horizontally */
+      align-items: center; /* Centers the navbar items vertically */
+      padding: 10px 0;
     }
 
     .navbar a {
-      float: left;
-      display: block;
       color: white;
       text-align: center;
       padding: 14px 20px;
       text-decoration: none;
       font-size: 17px;
+      display: inline-block; /* Allows the links to be inline and centered */
     }
 
     .navbar a:hover {
@@ -210,7 +213,7 @@
 let mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()} ;
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
