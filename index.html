@@ -1,28 +1,49 @@
-
 <html>
 <head>
   <style>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Center Table Example</title>
-  <style>
-  
     body {
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column; /* Ensure content is stacked vertically */
       min-height: 100vh;
-      background-color: #f0f0f0; 
+      background-image: linear-gradient(rgb(137, 207, 240), rgb(255, 255, 255));
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* Navigation bar styles */
+    .navbar {
+      width: 100%;
+      background-color: #3498db;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
     }
 
     table {
-      width: 50%;  
-      margin: 0 auto;  
+      width: 70%; /* Table width adjusted to 70% */
+      margin: 20px auto;
       border-collapse: collapse;
-      background-color:  
+      background-color: white;
     }
 
     th, td {
@@ -30,85 +51,115 @@
       padding: 10px;
       text-align: center;
     }
-  
-  #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 15px;
-  border: black;
-  outline: 
-  background-color: white;
-  color: rgb(157, 224, 267);
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
 
-#myBtn:hover {
-  background-color: #555;
-}
-  
-     body{
-         text-align: center;
-         background-image: linear-gradient(rgb(137, 207, 240), rgb(255, 255, 255));
-         min-width: 100%;
-         min-height: 100%;
-      }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+
+    td {
+      background-color: #f2f2f2;
+    }
+
+    /* Button styles for scrolling to top */
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 15px;
+      background-color: white;
+      color: rgb(157, 224, 267);
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px solid #3498db;
+    }
+
+    #myBtn:hover {
+      background-color: #555;
+      color: white;
+    }
+
+    img {
+      width: 80%; /* Ensures images are responsive */
+      max-width: 500px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 45%;
+      height: 215px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-family: 'Georgia', serif; /* Set a new font family */
+      font-size: 3.5rem; /* Increase font size */
+      color: #2c3e50; /* Dark color for better readability */
+      text-transform: uppercase; /* Make the text uppercase */
+      font-weight: bold; /* Make the text bold */
+      letter-spacing: 5px; /* Add spacing between letters */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+      margin-bottom: 30px;
+      margin-top: 70px; /* To ensure it's below the navbar */
+    }
+
+    h2, h3, p {
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 
 <body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#didYouKnow">Did You Know?</a>
+  <a href="#ocean">Our Ocean</a>
+  <a href="#size">Size of the Oceans</a>
+  <a href="#protect">Protecting Our Oceans</a>
+  <a href="#pollution">Pollution</a>
+</div>
+
+<!-- Main content -->
 <h1>My Website About The Ocean</h1>
-<h2>
-By Leia Sheykhzamanova 7E
-</h2>
-<img src= "https://thedaily.case.edu/wp-content/uploads/2023/06/underwater-view.jpg" width=500><br>
+<h2>By Leia Sheykhzamanova 7E</h2>
 
+<img src="https://thedaily.case.edu/wp-content/uploads/2023/06/underwater-view.jpg" alt="Ocean view" id="home">
 
+<h3>The ocean is a wonderful place.. just like this website! If you are interested, have a look.</h3>
 
-
-<h3>
-The ocean is a wonderdful place.. just like this website! If you are interested, have a look.
-</h3>
-<h2>
-Did you know?
-</h2>
+<h2 id="didYouKnow">Did you know?</h2>
 <p>
-1. The earth covers about 71% of the earths surface <br>
-2. The floor of the ocean is moving <br>
-3. The ocean is the earths greatest source of oxygen <br>
-4. The Pacific Ocean is the largest ocean, it is bigger than of all the world's land combined <br>
-5. Oysters make pearls with the same substance that forms their shells <br>
-6. Almost all of the Earth’s habitable space is in the ocean <br>
-7. Around 91% of ocean species remain undiscovered <br> 
-<br>
+  1. The earth covers about 71% of the earth's surface.<br>
+  2. The floor of the ocean is moving.<br>
+  3. The ocean is the earth's greatest source of oxygen.<br>
+  4. The Pacific Ocean is the largest ocean, it is bigger than all of the world's land combined.<br>
+  5. Oysters make pearls with the same substance that forms their shells.<br>
+  6. Almost all of the Earth’s habitable space is in the ocean.<br>
+  7. Around 91% of ocean species remain undiscovered.<br>
 </p>
-<h2>
-Some educational videos about the ocean!
-</h2>
+
+<h2>Some educational videos about the ocean!</h2>
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-<iframe width="300" height="215" src="https://www.youtube.com/embed/1WZsxVDTqcU?si=avZVGubhqIP8stIZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<iframe width="300" height="215" src="https://www.youtube.com/embed/_yH3BntZCSI?si=G5OIADXIy08Ypz-a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br> <br>
-<h2>
-Our ocean
-</h2>
+<div>
+  <iframe src="https://www.youtube.com/embed/1WZsxVDTqcU?si=avZVGubhqIP8stIZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/_yH3BntZCSI?si=G5OIADXIy08Ypz-a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<h2 id="ocean">Our Ocean</h2>
 <p>
-The ocean is a vast and powerful part of our earth, covering most of its surface. It’s full of life, from colorful fish and coral reefs to deep, mysterious areas that haven’t been explored just yet. The ocean's waves and tides shape the land and help regulate the Earth’s climate.The ocean is important because as it plays a huge role in supporting life. It provides food, oxygen, and a home for millions of species. The ocean also helps regulate the Earth's climate by absorbing heat and storing carbon. Without an ocean, life on Earth would be very different, and many of the things we depend on would disappear. It’s important to protect the ocean to keep our planet balanced and thriving.
-
+  The ocean is a vast and powerful part of our earth, covering most of its surface. It’s full of life, from colorful fish and coral reefs to deep, mysterious areas that haven’t been explored just yet. The ocean's waves and tides shape the land and help regulate the Earth’s climate. The ocean is important because it plays a huge role in supporting life. It provides food, oxygen, and a home for millions of species. The ocean also helps regulate the Earth's climate by absorbing heat and storing carbon. Without an ocean, life on Earth would be very different, and many of the things we depend on would disappear. It’s important to protect the ocean to keep our planet balanced and thriving.
 </p>
-<br> <br>
 
-
-
-
-<h2>
-Size of the oceans
-</h2>
+<h2 id="size">Size of the Oceans</h2>
 <table>
   <tr>
     <th>Ocean</th>
@@ -141,23 +192,18 @@ Size of the oceans
     <td>7,236 m</td>
   </tr>
 </table>
-<h2>Protecting Our Oceans</h2>
-<p>The ocean faces problems. We can make a difference by reducing plastic use, saving energy, and supporting ocean protection. Our ocean has many problems, like pollution, oil spills, and chemicals. Overfishing and climate change are also hurting marine life. Our oceans are crucial for life on Earth, providing oxygen, food, and regulating the climate. But pollution, overfishing, and climate change are harming them. To protect our oceans, we need to reduce plastic waste, fish sustainably, and fight climate change. Simple actions like using less plastic and supporting ocean conservation can make a big difference in keeping our oceans healthy for the future.</p>
 
-<img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRB7n25ZgEtGErVkO2DjsgetN7YGKmdLnew&s" width=400>
-<br>
-  
-<h2>
- Pollution
-</h2>
+<h2 id="protect">Protecting Our Oceans</h2>
 <p>
-The ocean is polluted by plastic, chemicals, and waste from factories and cities. Every year, tons of plastic end up in the water, hurting sea animals and plants. Animals can mistake trash for food or get trapped in it, which can harm or kill them. Chemicals from farms and cities also pollute the water, damaging marine life. This pollution is bad for both the ocean's health and the people who depend on it for food and resources.
-
-
-
-
+  The ocean faces problems. We can make a difference by reducing plastic use, saving energy, and supporting ocean protection. Our ocean has many problems, like pollution, oil spills, and chemicals. Overfishing and climate change are also hurting marine life. Our oceans are crucial for life on Earth, providing oxygen, food, and regulating the climate. But pollution, overfishing, and climate change are harming them. To protect our oceans, we need to reduce plastic waste, fish sustainably, and fight climate change. Simple actions like using less plastic and supporting ocean conservation can make a big difference in keeping our oceans healthy for the future.
 </p>
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRB7n25ZgEtGErVkO2DjsgetN7YGKmdLnew&s" alt="Ocean pollution" id="pollution">
+
+<h2>Pollution</h2>
+<p>
+  The ocean is polluted by plastic, chemicals, and waste from factories and cities. Every year, tons of plastic end up in the water, hurting sea animals and plants. Animals can mistake trash for food or get trapped in it, which can harm or kill them. Chemicals from farms and cities also pollute the water, damaging marine life. This pollution is bad for both the ocean's health and the people who depend on it for food and resources.
+</p>
 
 <script>
 // Get the button
@@ -180,7 +226,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
-
 
 </body>
 </html>
